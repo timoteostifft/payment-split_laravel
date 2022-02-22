@@ -12,4 +12,8 @@ class CompanyController extends Controller
     public function list(){
         return view('companies.form');
     }
+
+    public function save(){
+        return view('companies.form');
+    }
 }
