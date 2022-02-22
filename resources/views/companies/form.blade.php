@@ -2,7 +2,9 @@
 
 @section('company_form')
 
-<form action="{{route('save_company_form')}}" method="POST">
+<form action="{{route('add_company')}}" method="POST">
+
+  {{csrf_field()}}
 
   <div>
     <label for="name">Name: </label>

@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'App\Http\Controllers\CompanyController@list')->name('company_form');
+Route::get('/home', 'App\Http\Controllers\CompanyController@list')->name('company_form');
 
-Route::post('/', 'App\Http\Controllers\CompanyController@save')->name('save_company_form');
+Route::post('/hom', 'App\Http\Controllers\CompanyController@save')->name('add_company');
