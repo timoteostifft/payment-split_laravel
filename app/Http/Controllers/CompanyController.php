@@ -10,6 +10,6 @@ class CompanyController extends Controller
     public $isCompanyFormVisible = true;
 
     public function list(){
-        return view('companies.add');
+        return view('companies.form');
     }
 }
