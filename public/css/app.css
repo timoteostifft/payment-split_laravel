@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
 }
-body main div:first-child {
+body main #container {
   width: 100%;
   height: auto;
   display: flex;
@@ -11,13 +11,34 @@ body main div:first-child {
   flex-direction: column;
   border: 1px solid red;
 }
-body main div:first-child #header {
-  width: 40rem;
+body main #container #header {
+  width: 45rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
 }
-body main div:first-child #header button {
+body main #container #header button {
+  width: 5rem;
+}
+body main #container #companyForm form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 45rem;
+}
+body main #container #companyForm form div label {
+  font-size: 14.5px;
+}
+body main #container #companyForm form div input {
+  width: 7rem;
+}
+body main #container #companyForm form #amount label {
+  font-size: 14.5px;
+}
+body main #container #companyForm form #amount input {
+  width: 5rem;
+}
+body main #container #companyForm form button {
   width: 5rem;
 }

@@ -4,7 +4,7 @@ body{
 
   main{
     
-    div:first-child{
+    #container{
       width: 100%;
       height: auto;
 
@@ -16,7 +16,7 @@ body{
       border: 1px solid red;
 
       #header{
-        width: 40rem;
+        width: 45rem;
 
         display: flex;
         justify-content: space-between;
@@ -25,6 +25,38 @@ body{
 
         button{
           width: 5rem;
+        }
+      }
+
+      #companyForm{
+        form{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          width: 45rem;
+
+          div{
+            label{
+              font-size: 14.5px;
+            }
+            input{
+              width: 7rem;
+            }
+          }
+
+          #amount{
+            label{
+              font-size: 14.5px;
+            }
+            input{
+              width: 5rem;
+            }
+          }
+
+          button{
+            width: 5rem;
+          }
         }
       }
     }
