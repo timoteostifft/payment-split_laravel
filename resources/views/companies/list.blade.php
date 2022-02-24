@@ -8,7 +8,9 @@
 
       <div id="buttons">
         <button>LIST</button>
-        <button>REMOVE</button>
+        <button>
+          <a href="{{route('delete_company', $company->ID)}}">REMOVE</a>
+        </button>
       </div>
     </div>
   @endforeach  
