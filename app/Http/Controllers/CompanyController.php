@@ -23,8 +23,16 @@ class CompanyController extends Controller
 
         CompaniesModel::addCompany($validated);
 
-        $data = CompaniesModel::getCompaniesList();
-
-        return view('app',['companiesList' => $data]);
+        return redirect()->route('company_form');;
     }
+
+     public function delete(Request $request){
+        
+        $id = $request->route('id');
+        
+        CompaniesModel::delCompany($id);
+
+        return redirect()->route('company_form');
+
+     }
 }
