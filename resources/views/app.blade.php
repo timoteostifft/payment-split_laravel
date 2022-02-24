@@ -15,7 +15,7 @@
       @include('companies.form')
 
       @include('companies.list')
-      
+            
     </div>
   </main>
 </body>
