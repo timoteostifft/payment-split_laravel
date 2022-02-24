@@ -42,3 +42,18 @@ body main #container #companyForm form #amount input {
 body main #container #companyForm form button {
   width: 5rem;
 }
+body main #container #listContainer {
+  width: 45rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+body main #container #listContainer div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main #container #listContainer div p {
+  margin-right: 2rem;
+}
