@@ -13,14 +13,19 @@ class Company extends Model
     protected $table = 'Companies';
 
     public static function getCompaniesList(){
-        $sql = self::select([
-            'id',
-            'name',
-            'cpnj',
-            'amount'
-        ]);
+        
+        $sql = DB::table('Companies')->get();
 
-        return $sql;
+        unset($companiesList);
+        $companiesList = array();
+
+        foreach ($sql as $company)
+        {
+            array_push($companiesList, $company);
+        }
+
+        return $companiesList;
+
     }
 
     public static function addCompany($data){
