@@ -40,4 +40,10 @@ class Company extends Model
 
         // dd(DB::getQueryLog());
     }
+
+     public static function delCompany($id){
+        
+         $sql = self::where('ID', $id);
+         $sql->delete();
+     }
 }
