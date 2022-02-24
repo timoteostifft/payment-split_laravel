@@ -46,14 +46,24 @@ body main #container #listContainer {
   width: 45rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
 }
-body main #container #listContainer div {
+body main #container #listContainer #listData {
+  width: 45rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
-body main #container #listContainer div p {
-  margin-right: 2rem;
+body main #container #listContainer #listData p {
+  font-size: 14.5px;
+}
+body main #container #listContainer #listData #buttons {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  flex-direction: row;
+}
+body main #container #listContainer #listData #buttons button:nth-child(1) {
+  margin-right: 1rem;
 }
