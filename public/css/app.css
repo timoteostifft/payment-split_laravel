@@ -57,6 +57,7 @@ body main #container #listContainer #listData {
 }
 body main #container #listContainer #listData p {
   font-size: 14.5px;
+  min-width: 7rem;
 }
 body main #container #listContainer #listData #buttons {
   display: flex;
@@ -66,4 +67,8 @@ body main #container #listContainer #listData #buttons {
 }
 body main #container #listContainer #listData #buttons button:nth-child(1) {
   margin-right: 1rem;
+}
+body main #container #listContainer #listData #buttons button a {
+  text-decoration: none;
+  color: black;
 }
