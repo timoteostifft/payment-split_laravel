@@ -8,7 +8,10 @@ use App\Models\Company as CompaniesModel;
 class CompanyController extends Controller
 {
     public function list(){
-        return view('companies.form');
+
+        $data = CompaniesModel::getCompaniesList();
+
+        return view('app',['companiesList' => $data]);
     }
 
     public function save(Request $request){
@@ -20,6 +23,8 @@ class CompanyController extends Controller
 
         CompaniesModel::addCompany($validated);
 
-        return view('companies.form');
+        $data = CompaniesModel::getCompaniesList();
+
+        return view('app',['companiesList' => $data]);
     }
 }
