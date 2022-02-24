@@ -15,4 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/home', 'App\Http\Controllers\CompanyController@list')->name('company_form');
 
-Route::post('/hom', 'App\Http\Controllers\CompanyController@save')->name('add_company');
+Route::post('/home', 'App\Http\Controllers\CompanyController@save')->name('add_company');
