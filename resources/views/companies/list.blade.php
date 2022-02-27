@@ -7,9 +7,11 @@
       <p>Amount: {{ $company->amount }}</p>
 
       <div id="buttons">
-        <button>LIST</button>
         <button>
-          <a href="{{route('delete_company', $company->id)}}">REMOVE</a>
+          <a href="{{route('listParticipants', $company->id)}}">LIST</a>
+        </button>
+        <button>
+          <a href="{{route('deleteCompany', $company->id)}}">REMOVE</a>
         </button>
       </div>
     </div>
