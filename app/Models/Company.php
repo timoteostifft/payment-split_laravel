@@ -10,11 +10,11 @@ use DB;
 class Company extends Model
 {
     protected $connection = 'sqlite';
-    protected $table = 'Companies';
+    protected $table = 'companies';
 
-    public static function getCompaniesList(){
+    public static function list(){
         
-        $sql = DB::table('Companies')->get();
+        $sql = DB::table('companies')->get();
 
         unset($companiesList);
         $companiesList = array();
@@ -28,20 +28,20 @@ class Company extends Model
 
     }
 
-    public static function addCompany($data){
+    public static function add($data){
 
         // DB::enableQueryLog();
 
         $sql = self::insert([
-            'Name' => $data['name'],
-            'CNPJ' => $data['cnpj'],
-            'Amount' => $data['amount']
+            'name' => $data['name'],
+            'cnpj' => $data['cnpj'],
+            'amount' => $data['amount']
         ]);
 
         // dd(DB::getQueryLog());
     }
 
-     public static function delCompany($id){
+     public static function remove($id){
         
          $sql = self::where('ID', $id);
          $sql->delete();
