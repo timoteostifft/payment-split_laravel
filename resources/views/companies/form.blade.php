@@ -4,7 +4,7 @@
 </div>
 
 <div id="companyForm" style="display: none">
-  <form action="{{route('add_company')}}" method="POST">
+  <form action="{{route('addCompany')}}" method="POST">
 
     {{csrf_field()}}
   
