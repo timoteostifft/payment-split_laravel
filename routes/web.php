@@ -13,8 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home', 'App\Http\Controllers\CompanyController@list')->name('company_form');
-Route::post('/home', 'App\Http\Controllers\CompanyController@save')->name('add_company');
+Route::get('/home', 'App\Http\Controllers\CompanyController@list');
+Route::post('/home', 'App\Http\Controllers\CompanyController@save')->name('addCompany');
 
-Route::get('/home/company/delete/{id}', 'App\Http\Controllers\CompanyController@delete')->name('delete_company');
-Route::delete('/home/company/delete/{id}', 'App\Http\Controllers\CompanyController@delete')->name('delete_company');
+Route::get('/home/company/delete/{id}', 'App\Http\Controllers\CompanyController@delete')->name('deleteCompany');
+Route::delete('/home/company/delete/{id}', 'App\Http\Controllers\CompanyController@delete')->name('deleteCompany');
+
+Route::get('/home/company/list/{id}', 'App\Http\Controllers\ParticipantController@list')->name('listParticipants');
