@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Company as CompaniesModel;
+use App\Models\Company;
 
 class CompanyController extends Controller
 {
     public function list(){
 
-        $data = CompaniesModel::getCompaniesList();
+        $data = Company::list();
 
         return view('app',['companiesList' => $data]);
     }
@@ -21,7 +21,7 @@ class CompanyController extends Controller
             'amount' => 'required',
         ]);
 
-        CompaniesModel::addCompany($validated);
+        Company::add($validated);
 
         return redirect()->route('company_form');;
     }
@@ -30,7 +30,7 @@ class CompanyController extends Controller
         
         $id = $request->route('id');
         
-        CompaniesModel::delCompany($id);
+        Company::remove($id);
 
         return redirect()->route('company_form');
 
