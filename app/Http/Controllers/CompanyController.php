@@ -32,7 +32,7 @@ class CompanyController extends Controller
         
         Company::remove($id);
 
-        return redirect()->route('company_form');
+        return redirect()->route('companyForm');
 
      }
 }
