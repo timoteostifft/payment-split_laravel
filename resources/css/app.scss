@@ -2,6 +2,57 @@ body{
   margin: 0;
   padding: 0;
 
+  #participantsPage{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
+    border: 1px solid red;
+
+    margin: 0 auto;
+    width: 45rem;
+
+    #participantsPageHeader{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      width: 100%;
+
+      button{
+        width: 5rem;
+      }
+    }
+
+    #participantsForm{
+      form{
+        display: flex;
+        width: 45rem;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        margin: 0 2rem 0 2rem;
+
+        div{
+          label{
+            font-size: 14.5px;
+          }
+          input{
+            width: 7rem;
+          }
+        }
+
+        button{
+          width: 5rem;
+        }
+      }
+    }
+
+
+  }
+
   main{
     
     #container{

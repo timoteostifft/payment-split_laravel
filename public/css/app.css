@@ -2,6 +2,42 @@ body {
   margin: 0;
   padding: 0;
 }
+body #participantsPage {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  border: 1px solid red;
+  margin: 0 auto;
+  width: 45rem;
+}
+body #participantsPage #participantsPageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+body #participantsPage #participantsPageHeader button {
+  width: 5rem;
+}
+body #participantsPage #participantsForm form {
+  display: flex;
+  width: 45rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 2rem 0 2rem;
+}
+body #participantsPage #participantsForm form div label {
+  font-size: 14.5px;
+}
+body #participantsPage #participantsForm form div input {
+  width: 7rem;
+}
+body #participantsPage #participantsForm form button {
+  width: 5rem;
+}
 body main #container {
   width: 100%;
   height: auto;
