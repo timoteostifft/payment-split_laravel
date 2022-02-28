@@ -14,4 +14,10 @@ class ParticipantController extends Controller
 
         // return view('app',['companiesList' => $data]);
     }
+
+    public function add(){
+
+        return view('participants.list');
+    }
+
 }
