@@ -23,7 +23,7 @@ class CompanyController extends Controller
 
         Company::add($validated);
 
-        return redirect()->route('company_form');;
+        return redirect()->route('companyForm');;
     }
 
      public function delete(Request $request){
