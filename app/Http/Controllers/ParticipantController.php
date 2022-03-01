@@ -4,12 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Participant;
+use App\Models\Company;
 use App\Models\CompanyParticipant;
 class ParticipantController extends Controller
 {
     public function list($companyId){
 
-        return view('participants.list', ['companyId' => $companyId]);
+        $companyName = Company::getName($companyId);
+
+        return view('participants.list', [
+            'companyId' => $companyId,
+            'companyName' => strtoupper($companyName)
+        ]);
     }
 
     public function add(Request $request){
@@ -26,7 +32,12 @@ class ParticipantController extends Controller
 
         CompanyParticipant::add($request->route('id'),$participantId);
 
-        return view('participants.list', ['companyId' => $request->route('id')]);
+        $companyName = Company::getName($companyId);
+
+        return view('participants.list', [
+            'companyId' => $request->route('id'),
+            'companyName' => strtoupper($companyName)
+        ]);
     }
 
 }
