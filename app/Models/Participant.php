@@ -16,8 +16,20 @@ class Participant extends Model
       $sql = self::insert([
         'name' => $data['name'],
         'cnpj' => $data['cnpj'],
-        'amount' => $data['amount']
-    ]);
+        'percent' => $data['percent']
+      ]);
     
+    }
+
+    public function list(){}
+
+    public function remove(){}
+
+    public function getId(){
+
+      $sql = DB::table('participants')->orderBy('id','desc')->first();
+
+      return $sql->id;
+
     }
 } 
