@@ -45,4 +45,11 @@ class Company extends Model
          $sql = self::where('ID', $id);
          $sql->delete();
      }
+
+     public static function getName($id){
+
+        $company = DB::table('companies')->where('id', $id)->first();
+ 
+        return ($company->name);
+     }
 }
