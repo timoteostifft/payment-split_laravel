@@ -1,4 +1,4 @@
-<form method="POST">
+<form method="POST" action="{{route('addParticipant', $companyId)}}">
 
   {{csrf_field()}}
 
@@ -17,7 +17,7 @@
     <input type="number" id="percent" name="percent">
   </div>
 
-  <button>ADD</button>
+  <button type="submit">ADD</button>
 </form>
 
-{{-- action="{{route('addParticipant')}}"  --}}
+
