@@ -20,3 +20,4 @@ Route::get('/home/company/delete/{id}', 'App\Http\Controllers\CompanyController@
 Route::delete('/home/company/delete/{id}', 'App\Http\Controllers\CompanyController@delete')->name('deleteCompany');
 
 Route::get('/home/company/list/{id}', 'App\Http\Controllers\ParticipantController@list')->name('listParticipants');
+Route::post('/home/company/list/{id}', 'App\Http\Controllers\ParticipantController@add')->name('addParticipant');
