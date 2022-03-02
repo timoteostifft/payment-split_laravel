@@ -19,6 +19,21 @@
   </div>
 </div>
 
+<div id="listParticipants">
+  <br>
+  @foreach ($data as $participant)
+    <div id='listParticipantsData'>
+      <p>Name: {{ $participant->name }}</p>
+      <p>CPNJ: {{ $participant->cnpj }}</p>
+      <p>Percent: {{ $participant->percent }}%</p>
+
+      <button>
+        {{-- <a href="{{route('deleteCompany', $company->id)}}">REMOVE</a> --}}
+      </button>
+    </div>
+  @endforeach  
+</div>
+
 <script>
   function handleChangeParticipantFormVisibility(){
     var participantForm = document.getElementById('participantsForm')
