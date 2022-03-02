@@ -3,7 +3,11 @@
 </header>
 
 <div id="participantsPage">
-  <h3>PAYMENT SPLIT</h3>
+    <button id="homeButton">
+      <a href="http://127.0.0.1:8000/home/">RETURN</a>
+    </button>
+    
+    <h3>PAYMENT SPLIT</h3>
 
   <div id="participantsPageHeader">
     <h5>PARTICIPANTS FROM {{$companyName}}</h5>
