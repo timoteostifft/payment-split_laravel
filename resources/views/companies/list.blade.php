@@ -4,7 +4,7 @@
     <div id='listData'>
       <p>Name: {{ $company->name }}</p>
       <p>CPNJ: {{ $company->cnpj }}</p>
-      <p>Amount: {{ $company->amount }}</p>
+      <p>Amount: ${{ $company->amount }}</p>
 
       <div id="buttons">
         <button>
