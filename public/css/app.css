@@ -13,7 +13,7 @@ body #participantsPage {
 body #participantsPage #homeButton {
   display: flex;
   position: absolute;
-  bottom: 38.2rem;
+  bottom: 36.2rem;
   left: 20.2rem;
   width: 4rem;
   display: flex;
