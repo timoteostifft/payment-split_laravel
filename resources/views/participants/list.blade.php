@@ -28,7 +28,10 @@
       <p>Percent: {{ $participant->percent }}%</p>
 
       <button>
-        {{-- <a href="{{route('deleteCompany', $company->id)}}">REMOVE</a> --}}
+        <a href="{{route('removeParticipant',[
+          'companyId' => $companyId, 
+          'participantId' => $participant->participant_id]
+          )}}">REMOVE</a>
       </button>
     </div>
   @endforeach  
