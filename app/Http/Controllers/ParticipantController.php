@@ -13,9 +13,7 @@ class ParticipantController extends Controller
 
         $companyName = Company::getName($companyId);
 
-        $data = DB::select('select * from participants, companies_participants
-        where ? = companies_participants.company_id and participants.id = companies_participants.participant_id
-        ',[$companyId]);
+        $data = Participant::list($companyId);
 
         return view('participants.list', [
             'companyId' => $companyId,
@@ -40,9 +38,7 @@ class ParticipantController extends Controller
 
         $companyName = Company::getName($request->route('id'));
 
-        $data = DB::select('select * from participants, companies_participants
-        where ? = companies_participants.company_id and participants.id = companies_participants.participant_id
-        ',[$request->route('id')]);
+        $data = Participant::list($request->route('id'));
 
         return view('participants.list', [
             'companyId' => $request->route('id'),
@@ -51,4 +47,13 @@ class ParticipantController extends Controller
         ]);
     }
 
+    public function remove(Request $Request, $companyId, $participantId){
+    
+        CompanyParticipant::remove($companyId, $participantId);
+
+        Participant::remove($participantId);
+
+        return redirect()->route('listParticipants', ['id' => $companyId]);
+
+    }
 }
