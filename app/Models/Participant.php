@@ -21,9 +21,21 @@ class Participant extends Model
     
     }
 
-    public function list(){}
+    public function list($companyId){
 
-    public function remove(){}
+      $data = DB::select('select * from participants, companies_participants
+      where ? = companies_participants.company_id and participants.id = companies_participants.participant_id
+      ',[$companyId]);
+
+      return $data;
+    }
+
+    public function remove($id){
+
+      $sql = self::where('id', $id);
+      $sql->delete();
+
+    }
 
     public function getId(){
 
