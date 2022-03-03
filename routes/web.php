@@ -21,3 +21,6 @@ Route::delete('/home/company/delete/{id}', 'App\Http\Controllers\CompanyControll
 
 Route::get('/home/company/list/{id}', 'App\Http\Controllers\ParticipantController@list')->name('listParticipants');
 Route::post('/home/company/list/{id}', 'App\Http\Controllers\ParticipantController@add')->name('addParticipant');
+
+Route::get('/home/company/delete/{companyId}/{participantId}', 'App\Http\Controllers\ParticipantController@remove')->name('removeParticipant');
+
