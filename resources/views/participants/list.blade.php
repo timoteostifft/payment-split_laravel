@@ -11,7 +11,12 @@
 
   <div id="participantsPageHeader">
     <h5>PARTICIPANTS FROM {{$companyName}}:</h5>
-    <button onclick="handleChangeParticipantFormVisibility()" id="handleParticipantForm">ADD</button>
+    <div>
+      <button>
+        <a href="{{route('split', $companyId)}}">SPLIT</a>
+      </button>
+      <button onclick="handleChangeParticipantFormVisibility()" id="handleParticipantForm">ADD</button>
+    </div>
   </div>
   
   <div id="participantsForm" style="display: none">
