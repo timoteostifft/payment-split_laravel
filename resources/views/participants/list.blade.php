@@ -10,7 +10,7 @@
     <h3>PAYMENT SPLIT</h3>
 
   <div id="participantsPageHeader">
-    <h5>PARTICIPANTS FROM {{$companyName}}</h5>
+    <h5>PARTICIPANTS FROM {{$companyName}}:</h5>
     <button onclick="handleChangeParticipantFormVisibility()" id="handleParticipantForm">ADD</button>
   </div>
   

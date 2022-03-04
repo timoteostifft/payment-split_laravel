@@ -52,6 +52,29 @@ body #participantsPage #participantsForm form div input {
 body #participantsPage #participantsForm form button {
   width: 5rem;
 }
+body #listParticipants {
+  display: flex;
+  flex-direction: column;
+}
+body #listParticipants div {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  flex-direction: row;
+  width: 45rem;
+  margin: 0 auto;
+}
+body #listParticipants div p:not(:first-child) {
+  margin-left: 4.5rem;
+}
+body #listParticipants div button {
+  margin-left: auto;
+  width: 5rem;
+}
+body #listParticipants div button a {
+  text-decoration: none;
+  color: black;
+}
 body main #container {
   width: 100%;
   height: auto;

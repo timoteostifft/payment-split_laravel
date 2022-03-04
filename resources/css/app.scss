@@ -68,6 +68,34 @@ body{
 
   }
 
+  #listParticipants{
+    display: flex;
+    flex-direction: column;
+
+    div{
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      flex-direction: row;
+      width: 45rem;
+      margin: 0 auto;
+
+      p:not(:first-child){
+        margin-left: 4.5rem;
+      }
+
+      button{
+        margin-left: auto;
+        width: 5rem;
+
+        a{
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+  }
+
   main{
     
     #container{
