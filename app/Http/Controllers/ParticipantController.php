@@ -40,11 +40,8 @@ class ParticipantController extends Controller
 
         $data = Participant::list($request->route('id'));
 
-        return view('participants.list', [
-            'companyId' => $request->route('id'),
-            'companyName' => strtoupper($companyName),
-            'data' => $data
-        ]);
+        return redirect()->route('listParticipants', ['id' => $request->route('id')]);
+
     }
 
     public function remove(Request $Request, $companyId, $participantId){
