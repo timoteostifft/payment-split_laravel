@@ -24,3 +24,4 @@ Route::post('/home/company/list/{id}', 'App\Http\Controllers\ParticipantControll
 
 Route::get('/home/company/delete/{companyId}/{participantId}', 'App\Http\Controllers\ParticipantController@remove')->name('removeParticipant');
 
+Route::get('/home/company/split/{id}', 'App\Http\Controllers\CompanyController@split')->name('split');
