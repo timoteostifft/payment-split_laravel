@@ -28,12 +28,22 @@ body #participantsPage #homeButton a {
 body #participantsPage #participantsPageHeader {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: left;
   flex-direction: row;
   width: 100%;
 }
-body #participantsPage #participantsPageHeader button {
+body #participantsPage #participantsPageHeader div {
+  margin-left: auto;
+  width: 12rem;
+  display: flex;
+  justify-content: space-between;
+}
+body #participantsPage #participantsPageHeader div button {
   width: 5rem;
+}
+body #participantsPage #participantsPageHeader div button a {
+  text-decoration: none;
+  color: black;
 }
 body #participantsPage #participantsForm form {
   display: flex;
