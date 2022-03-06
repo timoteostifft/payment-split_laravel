@@ -9,6 +9,10 @@
     
     <h3>PAYMENT SPLIT</h3>
 
+  @php
+    echo $message ?? ''
+  @endphp
+
   <div id="participantsPageHeader">
     <h5>PARTICIPANTS FROM {{$companyName}}:</h5>
     <div>
