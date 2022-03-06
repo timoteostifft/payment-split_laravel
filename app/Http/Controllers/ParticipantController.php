@@ -11,13 +11,13 @@ class ParticipantController extends Controller
 {
     public function list($companyId){
 
-        $companyName = Company::getName($companyId);
+        $company = Company::get($companyId);
 
         $data = Participant::list($companyId);
 
         return view('participants.list', [
             'companyId' => $companyId,
-            'companyName' => strtoupper($companyName),
+            'companyName' => strtoupper($company->name),
             'data' => $data
         ]);
     }
@@ -32,13 +32,9 @@ class ParticipantController extends Controller
 
         Participant::add($validated);
         
-        $participantId = Participant::getId();
+        $participant = Participant::get();
 
-        CompanyParticipant::add($request->route('id'),$participantId);
-
-        $companyName = Company::getName($request->route('id'));
-
-        $data = Participant::list($request->route('id'));
+        CompanyParticipant::add($request->route('id'),$participant->id);
 
         return redirect()->route('listParticipants', ['companyId' => $request->route('id')]);
 
