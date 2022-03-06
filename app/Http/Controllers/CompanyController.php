@@ -38,22 +38,26 @@ class CompanyController extends Controller
      }
 
      public function split($companyId){
-
-        $companyName = Company::getName($companyId);
-
+        
         $data = Participant::list($companyId);
-
-        $amount = 0;
+        $percent = 0;
 
         foreach ($data as $participant){
-            $amount = ($participant->percent + $amount);
+            $percent = ($participant->percent + $percent);
         }
-    
-        echo '<script> confirm("TESTE")</script>';
-        $isConfirmed = True;
-        
-        if ($isConfirmed){
-            return redirect()->route('listParticipants', ['id' => $companyId]);
-        }
+
+        $company = Company::get($companyId);
+
+        $subtraction = ($company->amount / 100)*$percent;
+
+        // strval($amount);
+        $message = "THE COMPANY WILL RECEIVE R$" . ($company->amount - $subtraction);
+
+        return view('participants.list', [
+            'companyId' => $companyId,
+            'companyName' => strtoupper($company->name),
+            'data' => $data,
+            'message' => $message
+        ]);
      }
 }
