@@ -46,10 +46,10 @@ class Company extends Model
          $sql->delete();
      }
 
-     public static function getName($id){
+     public static function get($id){
 
         $company = DB::table('companies')->where('id', $id)->first();
  
-        return ($company->name);
+        return ($company);
      }
 }
