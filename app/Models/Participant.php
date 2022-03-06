@@ -37,11 +37,11 @@ class Participant extends Model
 
     }
 
-    public function getId(){
+    public function get(){
 
       $sql = DB::table('participants')->orderBy('id','desc')->first();
 
-      return $sql->id;
+      return $sql;
 
     }
 } 
