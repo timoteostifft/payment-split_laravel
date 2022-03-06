@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Company;
+use App\Models\Participant;
 
 class CompanyController extends Controller
 {
@@ -34,5 +35,25 @@ class CompanyController extends Controller
 
         return redirect()->route('companyForm');
 
+     }
+
+     public function split($companyId){
+
+        $companyName = Company::getName($companyId);
+
+        $data = Participant::list($companyId);
+
+        $amount = 0;
+
+        foreach ($data as $participant){
+            $amount = ($participant->percent + $amount);
+        }
+    
+        echo '<script> confirm("TESTE")</script>';
+        $isConfirmed = True;
+        
+        if ($isConfirmed){
+            return redirect()->route('listParticipants', ['id' => $companyId]);
+        }
      }
 }
