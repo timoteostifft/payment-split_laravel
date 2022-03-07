@@ -36,7 +36,7 @@ class ParticipantController extends Controller
 
         CompanyParticipant::add($request->route('id'),$participant->id);
 
-        return redirect()->route('listParticipants', ['companyId' => $request->route('id')]);
+        return redirect()->route('listParticipants', ['id' => $request->route('id')]);
 
     }
 
@@ -46,7 +46,7 @@ class ParticipantController extends Controller
 
         Participant::remove($participantId);
 
-        return redirect()->route('listParticipants', ['companyId' => $companyId]);
+        return redirect()->route('listParticipants', ['id' => $companyId]);
 
     }
 }
