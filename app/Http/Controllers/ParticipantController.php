@@ -51,7 +51,7 @@ class ParticipantController extends Controller
             }
         }
 
-        $message = 'INVALID SPLIT, VERIFY PARTICIPANTS PERCENTS.';
+        $message = 'INVALID ADDITION, VERIFY PARTICIPANTS PERCENTS.';
 
         return view('participants.list', [
             'companyId' => $company->id,
