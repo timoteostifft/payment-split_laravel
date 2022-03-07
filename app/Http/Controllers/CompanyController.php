@@ -51,7 +51,7 @@ class CompanyController extends Controller
         $subtraction = ($company->amount / 100)*$percent;
 
         // strval($amount);
-        $message = "THE COMPANY WILL RECEIVE R$" . ($company->amount - $subtraction);
+        $message = "THE COMPANY WILL RECEIVE R$ " . ($company->amount - $subtraction);
 
         return view('participants.list', [
             'companyId' => $companyId,
