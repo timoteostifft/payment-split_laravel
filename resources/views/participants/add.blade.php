@@ -4,17 +4,17 @@
 
   <div>
     <label for="name">Name: </label>
-    <input type="text" id="name" name="name">
+    <input type="text" id="name" name="name" required>
   </div>
 
   <div>
     <label for="name">CNPJ: </label>
-    <input type="text" id="cnpj" name="cnpj">
+    <input type="text" id="cnpj" name="cnpj" required>
   </div>
 
   <div>
     <label for="percent">Split Percent: </label>
-    <input type="number" id="percent" name="percent">
+    <input type="number" id="percent" name="percent" required>
   </div>
 
   <button type="submit">ADD</button>
