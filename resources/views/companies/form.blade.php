@@ -10,17 +10,17 @@
   
     <div>
       <label for="name">Name: </label>
-      <input type="text" id="name" name="name">
+      <input type="text" id="name" name="name" required>
     </div>
   
     <div>
       <label for="name">CNPJ: </label>
-      <input type="text" id="cnpj" name="cnpj">
+      <input type="text" id="cnpj" name="cnpj" required>
     </div>
     
     <div id="amount">
       <label for="percent">Money amount: </label>
-      <input type="number" id="amount" name="amount">
+      <input type="number" id="amount" name="amount" required>
     </div>
   
     <button type="submit">
